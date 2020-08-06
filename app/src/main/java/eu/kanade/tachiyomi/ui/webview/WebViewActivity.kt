@@ -100,6 +100,8 @@ class WebViewActivity : BaseActivity<WebviewActivityBinding>() {
 
             binding.webview.webViewClient = object : WebViewClientCompat() {
                 override fun shouldOverrideUrlCompat(view: WebView, url: String): Boolean {
+                    val android_browser: MutableMap<String, String> = HashMap()
+                    android_browser["X-Requested-With"] = "com.android.browser"
                     view.loadUrl(url)
                     return true
                 }
