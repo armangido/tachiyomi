@@ -100,6 +100,7 @@ class WebViewActivity : BaseActivity<WebviewActivityBinding>() {
 
             binding.webview.webViewClient = object : WebViewClientCompat() {
                 override fun shouldOverrideUrlCompat(view: WebView, url: String): Boolean {
+                    val 
                     view.loadUrl(url)
                     return true
                 }
